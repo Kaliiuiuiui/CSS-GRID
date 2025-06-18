@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prova</title>
+    <style>
+        .grid-container {
+            display: grid;
+            grid-template-areas:
+                'Cabeçalho Cabeçalho Cabeçalho Cabeçalho Cabeçalho'
+                'Menu Menu Menu Menu Menu'
+                'Conteudo Conteudo Conteudo Aside Aside'
+                'Rodapé Rodapé Rodapé Rodapé Rodapé';
+            grid-template-columns: repeat(5, 1fr);
+            grid-template-rows: auto 1fr 1fr 1fr auto;
+            gap: 5px;
+            background-color: rgb(216, 145, 210);
+            padding: 10px;
+            height: 50vh;
+        }
+
+        .grid-container>div {
+            background-color: #f1f1f1;
+            color: #000;
+            padding: 5px;
+            font-size: 30px;
+            text-align: left;
+        }
+
+        @media (max-width: 580px) {
+            .grid-container {
+                grid-template-areas:
+                    "Cabeçalho"
+                    "Menu"
+                    "Conteudo"
+                    "Rodapé";
+                grid-template-columns: 1fr;
+                grid-template-rows: auto auto auto auto;
+            }
+
+            .item4 {
+                display: none;
+            }
+        }
+
+        .aside {
+            display: block;
+        }
+
+        .item1 {
+            grid-area: Cabeçalho;
+        }
+
+        .item2 {
+            grid-area: Menu;
+        }
+
+        .item3 {
+            grid-area: Conteudo;
+        }
+
+        .item4 {
+            grid-area: Aside;
+        }
+
+        .item5 {
+            grid-area: Rodapé;
+        }
+
+        .integrantes {
+            text-align: center;
+            font-size: 20px;
+            color: #000;
+            padding: 10px;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="grid-container">
+        <div class="item1">Cabeçalho</div>
+        <div class="item2">Menu</div>
+        <div class="item3">Conteúdo</div>
+        <div class="item4">Aside</div>
+        <div class="item5">Rodapé</div>
+    </div>
+
+</body>
+<footer>
+    <div class="integrantes">Gracy Kelly e Misael de Jesus - 1ª DS - Grupo A</div>
+</footer>
+
+</html>
